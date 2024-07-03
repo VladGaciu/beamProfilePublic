@@ -11,6 +11,8 @@ import numpy as np
 from itertools import cycle
 from PIL import Image
 
+import keras
+
 import time
 
 from sklearn import svm, datasets
@@ -128,7 +130,7 @@ print("found all data")
 print("\nbegin creating model")
 
 #create model
-model = Sequential()
+model = keras.Sequential()
 
 print("model initiated")
 
