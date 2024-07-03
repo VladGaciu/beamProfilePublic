@@ -1,7 +1,12 @@
 print("begin loading libraries")
 
+
 import os
 import tensorflow as tf
+
+gpus = tf.config.experimental.list_physical_devices('GPU')
+print(len(gpus), "Physical GPUs, ")
+
 import numpy as np
 from itertools import cycle
 from PIL import Image
@@ -23,21 +28,19 @@ from keras.models import Sequential
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 
-from tensorflow.keras.preprocessing.image import ImageDataGenerator
+from keras.preprocessing.image import ImageDataGenerator
 from keras import callbacks
 from keras.metrics import top_k_categorical_accuracy
-from keras.models import Sequential
 from keras.layers import Conv2D, MaxPooling2D
 from keras.layers import Activation, Dropout, Flatten, Dense
 from keras import backend as K
 from keras.utils import plot_model
 from keras.metrics import top_k_categorical_accuracy
 
-from keras.layers.convolutional import Conv2DTranspose, Conv2D
+from tensorflow.keras.layers import Conv2DTranspose, Conv2D
 
 print("loaded all libraries")
 
-gpus = tf.config.experimental.list_physical_devices('GPU')
 if gpus:
    try:
 	# Currently memory growth needs to be the same across GPUs
@@ -52,16 +55,17 @@ if gpus:
 
 print("setup complete")
 
-train_data_dir='/home/vlad/Desktop/train/'
-validate_date_dir='/home/vlad/Desktop/allimages/'
-test_data_dir='/home/vlad/Desktop/'
+train_data_dir='/data/vlad.gaciu/beamProfilePublic/train/'
+validate_data_dir='/data/vlad.gaciu/beamProfilePublic/validation/'
+test_data_dir='/data/vlad.gaciu/beamProfilePublic/test/'
 
 # Define constants
-img_height = 250
-img_width = 250
+img_height = 400
+img_width = 400
 
 batch_size_train = 200
 batch_size_test = 100
+epochs=100
 
 input_shape = (img_width, img_height, 1)
 
@@ -120,8 +124,13 @@ test_generator = test_datagen.flow_from_directory(
     class_mode='categorical')
 print("")
 
+print("found all data")
+print("\nbegin creating model")
+
 #create model
 model = Sequential()
+
+print("model initiated")
 
 #Encoder
 model.add(Conv2D(27, (11, 11), input_shape=input_shape))
@@ -131,6 +140,7 @@ model.add(MaxPooling2D(pool_size=(4, 4)))
 model.add(Conv2D(9, (11, 11)))
 model.add(Activation('linear'))
 model.add(MaxPooling2D(pool_size=(4, 4)))
+print("encoder initiated")
 
 #Decoder
 
@@ -142,16 +152,21 @@ model.add(Conv2DTranspose(27, (7, 7)))
 model.add(Activation('linear'))
 #model.add(MaxPooling2D(pool_size=(2, 2)))
 
+print("decoder initiated")
+
 #Bottleneck
 
 model.add(Conv2D(1, (4, 4)))
 model.add(Activation('linear'))
+
+print("bottleneck initiated")
 
 #Output
 model.add(Flatten())
 model.add(Dense(9))
 model.add(Activation('relu'))
 model.add(Dense(3, activation='softmax'))
+print("model complete")
 
 output = model.summary()
 
@@ -160,6 +175,8 @@ output = model.summary()
 
 #def top_3_categorical_accuracy(y_true, y_pred):
 #    return top_k_categorical_accuracy(y_true, y_pred, k=10)
+
+print("compile model")
 
 model.compile(optimizer = tf.optimizers.SGD(learning_rate=0.00001),
               loss = 'SparseCategoricalCrossentropy',
@@ -185,7 +202,7 @@ model.evaluate(test_generator)
 
 # Test model prediction accuracy against true data
 
-path = '/home/vlad/Desktop/allimages/1/'
+path = '/data/vlad.gaciu/beamProfilPublic/validation/1/'
 dirList = os.listdir(path)
 plt.figure(figsize=(12,20))
 count = 0
