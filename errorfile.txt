@@ -1,0 +1,46 @@
+#!/usr/bin/bash -v
+
+set -e
+
+#set variable
+#num1 = $1
+
+#send input to runs file
+#num1 >> runs.txt
+echo "$1" > runs.txt
+
+#run python script, and log output.
+#python tftest.py > 1.txt
+#python autoencodergit.py > 2.txt
+python py3lab.edit1.py > lablog.txt
+2024-07-04 12:07:43.306919: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2024-07-04 12:07:45.834078: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2024-07-04 12:07:48.766220: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:4e:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-04 12:07:48.768786: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties: 
+pciBusID: 0000:5f:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-04 12:07:48.771325: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 2 with properties: 
+pciBusID: 0000:cb:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-04 12:07:48.773693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 3 with properties: 
+pciBusID: 0000:db:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-04 12:07:48.773703: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2024-07-04 12:07:48.776981: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2024-07-04 12:07:48.779029: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2024-07-04 12:07:48.779500: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2024-07-04 12:07:48.781040: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2024-07-04 12:07:48.781905: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2024-07-04 12:07:48.784785: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2024-07-04 12:07:48.804235: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1, 2, 3
+Using TensorFlow backend.
+/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/keras_preprocessing/image/image_data_generator.py:349: UserWarning: This ImageDataGenerator specifies `featurewise_std_normalization`, which overrides setting of `featurewise_center`.
+  warnings.warn('This ImageDataGenerator specifies '
+Traceback (most recent call last):
+  File "py3lab.edit1.py", line 138, in <module>
+    model.add(Conv2D(270, (110, 110), input_shape=input_shape))
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/keras/engine/sequential.py", line 133, in add
+    'Found: ' + str(layer))
+TypeError: The added layer must be an instance of class Layer. Found: <tensorflow.python.keras.layers.convolutional.Conv2D object at 0x7fe59210cc10>
