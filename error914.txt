@@ -1,0 +1,115 @@
+#!/usr/bin/bash -v
+
+set -e
+
+#set variable
+#num1 = $1
+
+#send input to runs file
+#num1 >> runs.txt
+echo "$1" > runs.txt
+
+#run python script, and log output.
+#python tftest.py > 1.txt
+#python autoencodergit.py > 2.txt
+python py3lab.edit1.py > lablog.txt
+2024-07-08 11:38:10.301477: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2024-07-08 11:38:13.348693: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcuda.so.1
+2024-07-08 11:38:16.258128: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:4e:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-08 11:38:16.260693: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties: 
+pciBusID: 0000:5f:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-08 11:38:16.263007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 2 with properties: 
+pciBusID: 0000:cb:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-08 11:38:16.265453: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 3 with properties: 
+pciBusID: 0000:db:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-08 11:38:16.265464: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2024-07-08 11:38:16.267556: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2024-07-08 11:38:16.269117: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2024-07-08 11:38:16.269719: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2024-07-08 11:38:16.271280: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2024-07-08 11:38:16.272288: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2024-07-08 11:38:16.275141: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2024-07-08 11:38:16.294619: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1, 2, 3
+2024-07-08 11:38:17.879927: I tensorflow/core/platform/cpu_feature_guard.cc:142] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN)to use the following CPU instructions in performance-critical operations:  AVX2 AVX512F FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-07-08 11:38:17.912977: I tensorflow/core/platform/profile_utils/cpu_utils.cc:104] CPU Frequency: 2100000000 Hz
+2024-07-08 11:38:17.927968: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55578bf3d6a0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2024-07-08 11:38:17.927997: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2024-07-08 11:38:18.831451: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x55578ab8ee20 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2024-07-08 11:38:18.831523: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): NVIDIA H100 80GB HBM3, Compute Capability 9.0
+2024-07-08 11:38:18.831537: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (1): NVIDIA H100 80GB HBM3, Compute Capability 9.0
+2024-07-08 11:38:18.831567: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (2): NVIDIA H100 80GB HBM3, Compute Capability 9.0
+2024-07-08 11:38:18.831578: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (3): NVIDIA H100 80GB HBM3, Compute Capability 9.0
+2024-07-08 11:38:19.160266: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 0 with properties: 
+pciBusID: 0000:4e:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-08 11:38:19.161536: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 1 with properties: 
+pciBusID: 0000:5f:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-08 11:38:19.162791: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 2 with properties: 
+pciBusID: 0000:cb:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-08 11:38:19.164019: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1716] Found device 3 with properties: 
+pciBusID: 0000:db:00.0 name: NVIDIA H100 80GB HBM3 computeCapability: 9.0
+coreClock: 1.98GHz coreCount: 132 deviceMemorySize: 79.10GiB deviceMemoryBandwidth: 3.05TiB/s
+2024-07-08 11:38:19.164036: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2024-07-08 11:38:19.164049: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcublas.so.10
+2024-07-08 11:38:19.164054: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcufft.so.10
+2024-07-08 11:38:19.164059: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcurand.so.10
+2024-07-08 11:38:19.164064: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusolver.so.10
+2024-07-08 11:38:19.164068: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcusparse.so.10
+2024-07-08 11:38:19.164073: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudnn.so.7
+2024-07-08 11:38:19.173910: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1858] Adding visible gpu devices: 0, 1, 2, 3
+2024-07-08 11:38:19.173926: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+Using TensorFlow backend.
+/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/keras_preprocessing/image/image_data_generator.py:349: UserWarning: This ImageDataGenerator specifies `featurewise_std_normalization`, which overrides setting of `featurewise_center`.
+  warnings.warn('This ImageDataGenerator specifies '
+Traceback (most recent call last):
+  File "py3lab.edit1.py", line 133, in <module>
+    model = Sequential()
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/training/tracking/base.py", line 457, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/keras/engine/sequential.py", line 117, in __init__
+    name=name, autocast=False)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/training/tracking/base.py", line 457, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py", line 308, in __init__
+    self._init_batch_counters()
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/training/tracking/base.py", line 457, in _method_wrapper
+    result = method(self, *args, **kwargs)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/keras/engine/training.py", line 317, in _init_batch_counters
+    self._train_counter = variables.Variable(0, dtype='int64', aggregation=agg)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/ops/variables.py", line 262, in __call__
+    return cls._variable_v2_call(*args, **kwargs)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/ops/variables.py", line 256, in _variable_v2_call
+    shape=shape)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/ops/variables.py", line 237, in <lambda>
+    previous_getter = lambda **kws: default_variable_creator_v2(None, **kws)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/ops/variable_scope.py", line 2646, in default_variable_creator_v2
+    shape=shape)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/ops/variables.py", line 264, in __call__
+    return super(VariableMetaclass, cls).__call__(*args, **kwargs)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py", line 1518, in __init__
+    distribute_strategy=distribute_strategy)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/ops/resource_variable_ops.py", line 1652, in _init_from_args
+    name="initial_value", dtype=dtype)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/framework/ops.py", line 1499, in convert_to_tensor
+    ret = conversion_func(value, dtype=dtype, name=name, as_ref=as_ref)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/framework/tensor_conversion_registry.py", line 52, in _default_conversion_function
+    return constant_op.constant(value, dtype, name=name)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 264, in constant
+    allow_broadcast=True)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 275, in _constant_impl
+    return _constant_eager_impl(ctx, value, dtype, shape, verify_shape)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 300, in _constant_eager_impl
+    t = convert_to_eager_tensor(value, ctx, dtype)
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/framework/constant_op.py", line 97, in convert_to_eager_tensor
+    ctx.ensure_initialized()
+  File "/data/vlad.gaciu/anaconda3/envs/tf-linux/lib/python3.7/site-packages/tensorflow/python/eager/context.py", line 539, in ensure_initialized
+    context_handle = pywrap_tfe.TFE_NewContext(opts)
+tensorflow.python.framework.errors_impl.InternalError: CUDA runtime implicit initialization on GPU:0 failed. Status: device kernel image is invalid
