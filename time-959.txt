@@ -1,0 +1,8 @@
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+               959       gpu pycode.s vlad.gac  R      20:34      1 mihai-x8640
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+               959       gpu pycode.s vlad.gac  R      22:19      1 mihai-x8640
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+               959       gpu pycode.s vlad.gac  R      32:36      1 mihai-x8640
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+               959       gpu pycode.s vlad.gac  R      39:28      1 mihai-x8640
