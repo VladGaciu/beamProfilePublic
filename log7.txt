@@ -1,0 +1,7 @@
+Time and date of experiment:  Thu Jul 11 14:29:50 EEST 2024
+1226 values correct out of 2170: 56.50% model accuracy
+220/243 wedge predictions: 0-
+1753/1927 near-field predictions: 1-
+0/0 far-field predictions: 2-
+height and width change - 2, zoom - 2
+Thu Jul 11 15:09:34 EEST 2024
